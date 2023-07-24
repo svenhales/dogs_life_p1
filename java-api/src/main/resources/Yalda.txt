@@ -1,0 +1,49 @@
+//QL-2
+*Creating table
+CREATE TABLE HEROES(
+    name varchar(50) not null,
+    alias varchar(50) not null,
+    superPower varchar(70) not null,
+    powerRanking int not null
+    );
+
+//QL-3
+*Inserting data
+INSERT into HEROES
+    (name, alias, superPower, powerRanking)
+values
+    ('Bruce Wayne', 'Batman', 'Martial Arts', 3),
+    ('Clark Kent', 'Superman', 'Flight', 5),
+    ('Jay Garrick', 'The Flash', 'Super-speed', 3),
+    ...
+;
+
+*Retrieving all the data inserted into the table
+SELECT * FROM HEROES
+
+*Retrieving certain columns
+SELECT name, alias FROM HEROES;
+
+*Retrieving and renaming a column
+SELECT name as 'Hero Name', alias FROM HEROES;
+
+*Modifying the data
+UPDATE HEROES
+    SET superPower = 'Flight and strength of steel'
+    WHERE alias = 'Superman';
+
+*Deleting specific rows
+DELETE FROM HEROES WHERE name LIKE '&el%';
+
+//QL-4
+*removing the entire table
+DROP TABLE HEROES;
+
+*Creating a table with a primary key
+CREATE TABLE HEROES (
+id int AUTO_INCREMENT PRIMARY KEY,
+name varchar (50) not null,
+alias varchar (50) not null,
+superPower varchar (70) not null,
+powerRanking int not null
+);

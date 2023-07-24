@@ -1,0 +1,97 @@
+	Command  
+
+
+Edit	select * from teams as t
+join heroes as h
+on t.id = h.team_id
+where t.id > 1 and t.id < 4
+Edit	select * from heroes as h
+where h.team_id > 1 and h.team_id < 4
+Edit	select * from teams as t where t.id > 1 and t.id < 4
+Edit	select * from heroes
+Edit	insert into heroes
+    (name, alias, superPower, powerRanking, team_id)
+values
+     ('Bruce Wayne', 'Batman', 'Martial Arts', 3, 1),
+    ('Clark Kent', 'Superman', 'Flight', 5, 1),
+    ('Jay Garrick', 'The Flash', 'Super-speed', 3, 2),
+    ('Alan Scott', 'Green Lantern', 'Ring Creation', 4, 2),
+    ('Helena Bertenelli', 'The Huntress', 'Crossbow Archery', 3, 3),
+    ('Dr. Harleen Quinzel', 'Harley Quinn', 'Hammer-fighting', 3, 3),
+    ('Floyd Lawton', 'Deadshot', 'Marksmaship', 2, 4),
+    ('Cecil Adams', 'Count Vertigo', 'Drug-dealing', 2, 4),
+    ('Damian Wayne', 'Robin', 'Swordsmanship', 2, 5),
+    ('Dick Grayson', 'Nightwing', 'Acrobatics', 3, 5)
+Edit	select * from teams
+Edit	insert into teams
+    (name, objectives)
+values
+    ('JSA', 'Defeat the Nazis'),
+    ('Birds of Prey', 'Fight crime(without men)'),
+    ('Task Force X', 'Follow Waller''s orders or die'),
+    ('Teen Titans', 'Teach young superheroes to be their best'),
+    ('Wayne Family', 'Protect the legacy of the Wayne name')
+Edit	create table heroes
+(
+    id int  AUTO_INCREMENT PRIMARY KEY,  
+    name varchar (50) not null,
+    alias varchar (50) not null,
+    superPower varchar (70) not null,
+    powerRanking int not null,
+    team_id int not null,
+    FOREIGN key (team_id) REFERENCES teams (id)
+)
+Edit	create table teams
+(
+    id int auto_increment PRIMARY KEY,
+    name varchar (50) not null,
+    objectives varchar (100) not null
+)
+Edit	drop table heroes
+Edit	CREATE TABLE heroes
+(
+    id int  AUTO_INCREMENT PRIMARY KEY,
+    name varchar (50) not null,
+    alias varchar (50) not null,
+    superPower varchar (70) not null,
+    powerRanking int not null
+)
+Edit	delete from heroes
+where name like '%el%'
+Edit	update heroes
+set powerranking=1
+where name like '%el%'
+Edit	select * from heroes where name like '%el%'
+Edit	update heroes
+set superpower = 'Flight, strength of steel, and laser in eyes', powerranking=4
+where alias='Superman'
+Edit	update heroes
+set superpower = 'Flight and strength of steel'
+where alias='Superman'
+Edit	update heroes
+set superpower = 'Flight and strength of steel'
+where alias='Superman'
+Edit	select * from heroes where powerranking >= 2 and powerranking < 5
+Edit	select * from heroes where powerranking > 2 and powerranking < 5
+Edit	select * from heroes where powerranking > 3
+Edit	select name as "Hero Name", alias from heroes
+Edit	select name, alias from heroes
+Edit	INSERT into heroes
+    (name, alias, superPower, powerRanking)
+values
+    ('Bruce Wayne', 'Batman', 'Martial Arts', 3),
+    ('Clark Kent', 'Superman', 'Flight', 5),
+    ('Jay Garrick', 'The Flash', 'Super-speed', 3),
+    ('Alan Scott', 'Green Lantern', 'Ring Creation', 4),
+    ('Helena Bertenelli', 'The Huntress', 'Crossbow Archery', 3),
+    ('Dr. Harleen Quinzel', 'Harley Quinn', 'Hammer-fighting', 3),
+    ('Floyd Lawton', 'Deadshot', 'Marksmaship', 2),
+    ('Cecil Adams', 'Count Vertigo', 'Drug-dealing', 2),
+    ('Damian Wayne', 'Robin', 'Swordsmanship', 2),
+    ('Dick Grayson', 'Nightwing', 'Acrobatics', 3)
+Edit	CREATE TABLE heroes(
+    name varchar (50) not null,
+    alias varchar (50) not null,
+    superPower varchar (70) not null,
+    powerRanking int not null
+)
