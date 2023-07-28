@@ -33,5 +33,8 @@ public class DogHandlerTest {
     }
 
     //This is a test
+    @Test
+    public void getDogByName (){
 
+    }
 }
