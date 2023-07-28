@@ -19,9 +19,22 @@ public class DogHandler {
     }
 
     public Dog getDogById(long id) {
-        return itsDogRepo.findById(id);
+        if (id==0){
+            return null;
+        }
+        else{ 
+            return itsDogRepo.findById(id);
+        }
     }
 
+    public Dog getDogByName(String name) {
+        List<Dog> dogs = itsDogRepo.findByName(name);
+        if (dogs.size() != 1) {
+            return null;
+        } else {
+            return dogs.get(0);
+        }
+    }
 
 
 }
