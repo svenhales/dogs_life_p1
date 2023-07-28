@@ -18,4 +18,8 @@ public class DogHandler {
         return itsDogRepo.count();
     }
 
+    public Dog getDogById(long id) {
+        return itsDogRepo.findById(id).orElse(null);
+    }
+
 }
