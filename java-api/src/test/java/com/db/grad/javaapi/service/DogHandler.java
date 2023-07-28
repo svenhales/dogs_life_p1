@@ -19,7 +19,12 @@ public class DogHandler {
     }
 
     public Dog getDogById(long id) {
-        return itsDogRepo.findById(id);
+        if (id==null){
+            return null;
+        }
+        else{ 
+            return itsDogRepo.findById(id);
+        }
     }
 
 }
