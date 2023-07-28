@@ -36,5 +36,18 @@ public class DogHandler {
         }
     }
 
+    public long updateDogDetails(Dog dog) {
+        return itsDogRepo.save(dog);
+    }
+
+    public boolean removeDog(long id) {
+        if (itsDogRepo.existsById(id)) {
+            itsDogRepo.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }
