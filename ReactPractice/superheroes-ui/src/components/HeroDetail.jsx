@@ -25,6 +25,8 @@ const incrementCounter =()=>{
     <Col><Button variant="primary" onClick={incrementCounter}>Like</Button></Col>
     <Col>{counter > 0 && <Card.Text>Likes: {counter}</Card.Text>}</Col>
   </Row></>
+   setCounter(counter+1);
+   props.parentCount(props.info.alias);
 }
 
 
