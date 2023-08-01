@@ -32,8 +32,17 @@ const HeroForm = () => {
         hero.name = name;
         hero.ability = ability;
         hero.teamID = teamID;
-        console.log(hero);
-      }
+        saveHero(hero)
+          .then(res => {
+             setAbility('');
+             setAlias('');
+             setName('');
+             setTeamID(0)
+             })
+           .catch(err=>{
+              console.log(err);
+             })   
+       }
 
 
     return (
