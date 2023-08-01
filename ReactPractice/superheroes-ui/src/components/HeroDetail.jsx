@@ -18,4 +18,15 @@ const HeroDetail = (props) => {
   )
 }
 
+const[counter, setCounter] = useState(0);
+const incrementCounter =()=>{
+  setCounter(counter+1);
+  <><><Button variant="primary" onClick={incrementCounter}>Like</Button><Card.Text>Likes: {counter}</Card.Text></><Row>
+    <Col><Button variant="primary" onClick={incrementCounter}>Like</Button></Col>
+    <Col>{counter > 0 && <Card.Text>Likes: {counter}</Card.Text>}</Col>
+  </Row></>
+}
+
+
+
 export default HeroDetail
