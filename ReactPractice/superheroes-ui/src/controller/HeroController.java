@@ -1,7 +1,9 @@
-package com.example.superheroes.controller;
+package controller;
 
-import com.example.superheroes.model.Hero;
-import com.example.superheroes.service.HeroService;
+import components.AllHeroes;
+import components.HeroDetail;
+import components.HeroForm;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
